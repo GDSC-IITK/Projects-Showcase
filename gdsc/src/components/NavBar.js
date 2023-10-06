@@ -26,7 +26,7 @@ export const NavBar = () => {
         <Container>
           <Navbar.Brand href="/">
             <div className="nav-google">
-            <img src={logo} alt="Logo" />
+            <img src={logo} alt="Logo" className="Logo" />
             <h2 className="nav-google-name web">Google Developer Student Club</h2>
           </div>
           </Navbar.Brand>

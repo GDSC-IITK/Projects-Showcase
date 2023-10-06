@@ -76,7 +76,10 @@ input:focus, textarea:focus, select:focus {
 
 /************ Navbar Css ************/
 
-
+.Logo{
+  width: 50px;
+  height: 50px;
+}
 
 
 .nav-google{
@@ -179,7 +182,10 @@ span.navbar-text {
   font-weight: 700;
   color: #000000;
   border: 1px solid #000000;
-  padding: 18px 34px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 34px;
+  padding-right: 34px;
   font-size: 18px;
   margin-left: 18px;
 	position: relative;
