@@ -328,7 +328,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   .banner {
     margin-top: 0;
-    padding: 100px 0 150px 0;
+    padding: 100px 0 50px 0;
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -413,6 +413,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 35%;
   right: 0;
   z-index: -4;
+}
+
+@media screen and (max-width: 768px) {
+
+  .project p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px auto 30px auto;
+    text-align: center;
+    width: 96%;
+  }
+
+
 }
 
 /************ Footer Css ************/
