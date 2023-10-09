@@ -9,7 +9,7 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import DateFilter from './DateFilter';
 
-export const Projects = () => {
+export const Projects1 = () => {
 
   const projects = [
     {
@@ -67,6 +67,8 @@ export const Projects = () => {
   
       setFilteredItems(filtered);
     };
+
+  
   
   return (
     <section className="project" id="projects">
@@ -78,20 +80,69 @@ export const Projects = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
                 <p>Google Developer Student Clubs (GDSC) projects encompass a diverse range of innovative initiatives driven by the collaborative efforts of student developers. These projects reflect the GDSC mission to foster technological skills and problem-solving abilities among students while creating a positive impact on their communities and the world. GDSC projects often span various domains, including mobile app development, web applications, machine learning, and more.</p>
-                
                 <div className="proj-filter-radio">
                   <DateFilter onFilter={handleFilter}/>
-                 
-                  <div className="toggler">
+
+
+                  {/* <div className="proj-radio">
+                    <label>
+                      <input
+                        type="radio"
+                        className="radio"
+                        id="radio-1"
+                        value="option1"
+                        checked={selectedOption === 'option1'}
+                        onChange={handleOptionChange}
+                      />
+                      Grid
+                    </label>
+
+                    <label>
+                      <input
+                      type="radio"
+                      className="radio"
+                      id="radio-2"
+                        value="option2"
+                        checked={selectedOption === 'option2'}
+                        onChange={handleOptionChange}
+                      />
+                      List
+                    </label>
+                  </div> */}
+
+                  <div className="body1">
+                    <div className="container1">
+                      <form className="toggle">
+                        <input type="radio" id="choice1" name="choice" value="creative" />
+                        <label htmlFor="choice1">List</label>
+                        <input type="radio" id="choice2" name="choice" value="productive" />
+                        <label htmlFor="choice2">Grid</label>
+                        <div id="flap">
+                          <span className="content">productive</span>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+          
+
+
+
+
+
+                  {/* <div className="toggler">
                     <p className="toggler-grid">Grid</p>
                     <div className={view?"grid":"list"} onClick={toggleView}>
                       <div className="toggler-slider-circle"></div>
                     </div>
                     <p className="toggler-list">List</p>
-                  </div>
+                  </div> */}
+
+
+
+                  
                   </div>
                   
-                {view?<Row>
+                {selectedOption==='option1'?<Row>
                         {
                           filteredItems.map((project, index) => {
                             return (
