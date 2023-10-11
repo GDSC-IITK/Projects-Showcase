@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -20,7 +21,6 @@ const DateFilter = ({ onFilter }) => {
 
   return (
     <div className='date-filter'>
-        <div >
       <div className='date-filter-dates'>
         <label>Start Date:</label>
         <DatePicker selected={startDate} onChange={handleStartDateChange} />
@@ -29,7 +29,7 @@ const DateFilter = ({ onFilter }) => {
         <label>End Date:</label>
         <DatePicker selected={endDate} onChange={handleEndDateChange} />
       </div>
-      </div>
+
       <button className="filter-button" onClick={applyFilter}>Apply</button>
     </div>
   );

@@ -1,0 +1,140 @@
+
+/************ Default Css ************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+  
+  .info-container {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+/* CSS for the heading */
+.info-heading {
+    font-size: 40px;
+    font-weight: bold;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.solution
+{
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  padding-left: 2%;
+
+  align-items: center;
+  margin-bottom: 10px;
+}
+.info-description {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+.info-description-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.deadline
+{
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  padding-left: 2%;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.info-deadline-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 12px;
+}
+.info-deadline {
+    font-size: 20px;
+    color: red;
+    margin-bottom: 12px;
+}
+
+.info-participants {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+  .proj-detailed-cell 
+  {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border: 2px solid white;
+    align-items: center;
+    margin-bottom: 15px;
+    boxShadow: '1px 2px 9px #F4AAB9';
+    margin: '4em';
+    padding: '1em';
+  }
+
+  .proj-detailed-name
+  {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .proj-detailed-name p
+  {
+    font-size: 50px;
+
+    padding: 0;
+  }
+
+  .proj-detailed-text
+  {
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+  }
+
+  .proj-detailed-deadline
+  {
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+  }
+
+  .proj-detailed-participants
+  {
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+  }
+  
+
+  
+  

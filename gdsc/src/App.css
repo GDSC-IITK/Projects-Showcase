@@ -413,6 +413,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 15px;
   letter-spacing: 0.8px;
 }
+
+.link span {
+  font-style: bold;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  
+}
+
 .background-image-right {
   top: 20%;
   position: absolute;
@@ -464,6 +473,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  color: white;
 }
 
 .proj-radio{
@@ -471,10 +481,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   flex-direction: row;
   justify-content: space-between;
   align-items:end;
+  color: white;
+  
 }
 
 .proj-radio label{
   color: white;
+  size: 20px;
   margin-left: 10px;
 }
 
@@ -491,18 +504,33 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 }
 
+.link
+{
+  display: inline-block;
+    padding: 25px;
+    background: rgba(255,255,255, 0.7);
+    text-decoration: none;
+    padding: 8px 20px;
+}
+
+.link h3
+{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+  color: black;
+}
 
 /* ***** Project Cell ***** */
 
 
 .proj-list-cell {
   display: flex;
-  height: 70px;
   font-size: 18px;
   flex-direction: row;
   background-color: transparent;
   border: 2px solid white;
   border-radius: 25px;
+  height: 120px;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -512,7 +540,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .proj-list-cell:hover {
   background-color: rgb(255, 255, 255);
-  height: 100px;
+  height: 150px;
 
   .proj-list-cell-index,
 .proj-list-cell-title,
@@ -563,12 +591,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .toggler{
   display: flex;
   align-items:last baseline;
+  color: pink;
 
 }
 
 
 .toggler p {
-  font-weight: 900;
+  font-weight: 500;
+  color: white;
+  font-size: 24px;
 }
 
 .grid,.list{
@@ -685,4 +716,101 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-size: 14px;
     padding: 8px 16px;
   }
+}
+
+
+/************ Banner Exp ************/
+
+
+
+.banner-exp {
+  margin-top: 0;
+  padding: 200px 0 150px 0;
+  background-position: top center;
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.banner-exp h1 {
+  color: #4285F4;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+.banner-exp p {
+  color: #696868;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+}
+.detail-heading {
+  color: #000000;
+  font-weight: 700;
+  font-size: 28px;
+  margin-top: 2.5vh;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+}
+
+.detail-text {
+  color: #000000;
+  font-weight: 400;
+  font-size: 20px;
+  margin-left: 30px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+}
+
+.banner-exp button {
+  color: #000000;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+}
+.banner-exp button svg {
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+}
+.banner-exp button:hover svg {
+  margin-left: 25px;
+}
+.banner-exp img {
+  animation: updown 3s linear infinite;
+}
+
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
+}
+
+.loader{
+  margin-top: 100px;
+  margin-left: 150px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .banner-exp {
+    margin-top: 0;
+    padding: 100px 0 50px 0;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .loader{
+    margin-left: 80px;
+  }
+
 }
