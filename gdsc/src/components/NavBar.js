@@ -40,17 +40,16 @@ export const NavBar = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link href="/" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+              <Nav.Link href="#projects" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#"><img src={navIcon1} alt="" /></a>
-                <a href="#"><img src={navIcon2} alt="" /></a>
-                <a href="#"><img src={navIcon3} alt="" /></a>
+                <a href="https://www.linkedin.com/company/gdsc-iit-kanpur/?originalSubdomain=in" target="_blank" rel="noopener noreferrer"><img src={navIcon1} alt="" /></a>
+                <a href="https://www.instagram.com/gdsc.iitk/" target="_blank" rel="noopener noreferrer"><img src={navIcon3} alt="" /></a>
               </div>
-              <HashLink to='#connect'>
+              <a href="https://gdsc.community.dev/indian-institute-of-technology-iit-kanpur/" target="_blank" rel="noopener noreferrer">
                 <button className="vvd"><span>Join Us</span></button>
-              </HashLink>
+              </a>
             </span>
           </Navbar.Collapse>
         </Container>
