@@ -2,7 +2,7 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import React, { useState } from "react";
 import { ProjectCard } from "./ProjectCard";
 import { ProjectList } from "./ProjectList"
-import projImg1 from "../assets/img/1.jpg";
+import projImg1 from "../assets/img/logobg.png";
 import projImg2 from "../assets/img/2.jpg";
 import projImg3 from "../assets/img/3.jpg";
 import 'animate.css';
@@ -96,23 +96,20 @@ export const Projects = () => {
                     <Col size={12}>
                         <TrackVisibility>
                             {({ isVisible }) =>
-                                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                                    <h2>Projects</h2>
-                                    <p>Google Developer Student Clubs (GDSC) projects encompass a diverse range of innovative initiatives driven by the collaborative efforts of student developers. These projects reflect the GDSC mission to foster technological skills and problem-solving abilities among students while creating a positive impact on their communities and the world. GDSC projects often span various domains, including mobile app development, web applications, machine learning, and more.</p>
-
+                                <div className={isVisible ? "animate__animated animate__fadeIn" : ""} style={{flexDirection:'column'}}>
                                     <div className="proj-filter-radio">
                                         <DateFilter onFilter={handleFilter} />
 
-                                        <div className="toggler">
+                                        {/* <div className="toggler">
                                             <p className="toggler-grid">Grid</p>
                                             <div className={view ? "grid" : "list"} onClick={toggleView}>
                                                 <div className="toggler-slider-circle"></div>
                                             </div>
                                             <p className="toggler-list">List</p>
-                                        </div>
+                                        </div> */}
                                     </div>
 
-                                    {view ? <Row>
+                                    { <Row>
                                         {
                                             projects.map((project, index) => {
                                                 return (
@@ -123,20 +120,22 @@ export const Projects = () => {
                                                 )
                                             })
                                         }
-                                    </Row> :
-                                        <div>
-                                            {
-                                                projects.map((project, index) => {
-                                                    return (
-                                                        <ProjectList
-                                                            key={index}
-                                                            {...project}
-                                                            index={index}
-                                                        />
-                                                    )
-                                                })
-                                            }
-                                        </div>}
+                                    </Row> 
+                                    // :
+                                    //     <div>
+                                    //         {
+                                    //             projects.map((project, index) => {
+                                    //                 return (
+                                    //                     <ProjectList
+                                    //                         key={index}
+                                    //                         {...project}
+                                    //                         index={index}
+                                    //                     />
+                                    //                 )
+                                    //             })
+                                    //         }
+                                    //     </div>
+                                        }
 
                                 </div>}
 

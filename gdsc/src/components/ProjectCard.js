@@ -2,8 +2,8 @@ import { Col } from "react-bootstrap";
 import { Route, Routes, Router } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import Contact from "./Contact";
-import img from "../assets/img/1.jpg";
-import projImg1 from "../assets/img/1.jpg";
+import img from "../assets/img/logobg.png";
+import projImg1 from "../assets/img/logobg.png";
 import projImg2 from "../assets/img/2.jpg";
 import projImg3 from "../assets/img/3.jpg";
 import { useState, useEffect } from "react";
@@ -17,7 +17,8 @@ export const ProjectCard = ({ index, title, description, imgUrl}) => {
     <Col size={12} sm={6} md={4}>
       <div className="proj-imgbx">
         <img src={img}
-        alt="car"/>
+        style={{opacity:0.25}}
+        alt="logo"/>
         <div className="proj-txtx">
           <h4>{title}</h4>
           <span>{description}</span><br></br>
