@@ -23,7 +23,7 @@ export const ProjectCard = ({ index, title, description, imgUrl}) => {
           <h4>{title}</h4>
           <span>{description}</span><br></br>
           <div className="link">
-            <button onClick={saveData}>
+            <button onClick={()=>{saveData();}}>
               <Link to={{
                 pathname: "/projects", state: [{ id: 19923 }]
               }}><span> Details</span></Link>

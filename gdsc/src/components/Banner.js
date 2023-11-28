@@ -50,16 +50,18 @@ export const Banner = () => {
   return (
     <section className="banner" id="home">
       <Container>
+
         <Row style={{justifyContent:'space-between'}}>
           <Col xs={12} md={6} xl={7}>
           <div >
                 <h1>{`Projects`} </h1>
                   <p style={{textAlign:'justify',textJustify:'inter-word'}}>Google Developer Student Clubs (GDSC) projects encompass a diverse range of innovative initiatives driven by the collaborative efforts of student developers. These projects reflect the GDSC mission to foster technological skills and problem-solving abilities among students while creating a positive impact on their communities and the world. GDSC projects often span various domains, including mobile app development, web applications, machine learning, and more.</p>
-                  {/* <button onClick={() => console.log('connect')}>Let’s Code <ArrowRightCircle size={25} /></button> */}
+                  <div id="infoStrip" className="infoStrip">Winter Projects Coming Soon. Stay Tuned!!</div>
+
               </div>
+
           </Col>
           <Col xs={12} md={6} xl={5}>
-          {/* Align the image to the right */}
           <img src={banner} alt="Description of the image" className="img-fluid" style={{ width: '40%', height: 'auto' }} />
         </Col>
           {/* <Col xs={12} md={6} xl={5}>

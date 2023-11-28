@@ -276,10 +276,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #0F9D58; /* Google green color */
 }
 
+.infoStrip {
+  width: 100%;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
 .banner {
   margin-top: 0;
-  padding: 200px 0 150px 0;
+  padding: 125px 0 150px 0;
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -519,6 +528,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     background: rgba(255,255,255, 0.7);
     text-decoration: none;
     padding: 8px 20px;
+    border-radius: 200px;
+    margin: 10px;
 }
 
 .link h3
@@ -733,7 +744,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .banner-exp {
   margin-top: 0;
-  padding: 200px 0 150px 0;
+  padding: 75px 0 20px 0;
   background-position: top center;
   background-color: white;
   background-size: cover;

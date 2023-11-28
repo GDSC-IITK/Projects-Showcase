@@ -94,11 +94,9 @@ export const Projects = () => {
             <Container>
                 <Row>
                     <Col size={12}>
-                        <TrackVisibility>
-                            {({ isVisible }) =>
-                                <div className={isVisible ? "animate__animated animate__fadeIn" : ""} style={{flexDirection:'column'}}>
+                                <div style={{flexDirection:'column'}}>
                                     <div className="proj-filter-radio">
-                                        <DateFilter onFilter={handleFilter} />
+                                        {/* <DateFilter onFilter={handleFilter} /> */}
 
                                         {/* <div className="toggler">
                                             <p className="toggler-grid">Grid</p>
@@ -137,9 +135,8 @@ export const Projects = () => {
                                     //     </div>
                                         }
 
-                                </div>}
+                                </div>
 
-                        </TrackVisibility>
                     </Col>
                 </Row>
             </Container>

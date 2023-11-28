@@ -33,44 +33,11 @@ export const Banner_Exp = () => {
     var namey = JSON.parse(localStorage.getItem('namey'));
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const [text, setText] = useState('');
+    const [text, setText] = useState(namey.title);
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const [index, setIndex] = useState(1);
     const toRotate = [namey.title, namey.title, namey.title];
     const period = 1000;
-
-    useEffect(() => {
-        let ticker = setInterval(() => {
-            tick();
-        }, delta);
-
-        return () => { clearInterval(ticker) };
-    }, [text])
-
-    const tick = () => {
-        let i = loopNum % toRotate.length;
-        let fullText = toRotate[i];
-        let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
-
-        setText(updatedText);
-
-        if (isDeleting) {
-            setDelta(prevDelta => prevDelta / 2);
-        }
-
-        if (!isDeleting && updatedText === fullText) {
-            setIsDeleting(true);
-            setIndex(prevIndex => prevIndex - 1);
-            setDelta(period);
-        } else if (isDeleting && updatedText === '') {
-            setIsDeleting(false);
-            setLoopNum(loopNum + 1);
-            setIndex(1);
-            setDelta(500);
-        } else {
-            setIndex(prevIndex => prevIndex + 1);
-        }
-    }
 
     function hasDeadlinePassed(deadline) {
         const deadlineDate = new Date(deadline);
@@ -86,6 +53,8 @@ export const Banner_Exp = () => {
     
     const deadlineStatusList = projects.map(project => hasDeadlinePassed(project.deadline));
     const tagsList = projects.map(project => tagsCreate(project.tags));
+    const techstacksList = projects.map(project => tagsCreate(project.tech_stack));
+
 
     const TagsContainer = styled.div`
     display: flex;
@@ -131,16 +100,12 @@ export const Banner_Exp = () => {
             <StyledSection className="banner-exp" id="home">
             <Container>
                 <Row className="aligh-items-center">
-                        <TrackVisibility>
-                            {({ isVisible }) =>
-                                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                                <div>
                                     {projects.map((project, index) => {
-                                        if (index == data.index)
+                                        if (index == data.index-1)
                                             return (
                                                 <div>
-                                                    <h1><span className="txt-rotate"><span className="wrap">{text}</span></span></h1>
-                                                    <div id="projectsContainer">
-                                                    </div>
+                                                    <h1><span><span >{text}</span></span></h1>
                                                     <TagsContainer id="tagsContainer" className="tags">
                                                     {tagsList[index].map((tag, tagIndex) => (
                                                         <Tag key={tagIndex}>{tag}</Tag>
@@ -152,7 +117,7 @@ export const Banner_Exp = () => {
                                                     <div class="detail-text" > {project.solution} </div>
                                                     <div class="detail-heading"> Tech Stacks </div>
                                                     <TagsContainer id="tagsContainer" className="tags">
-                                                        {tagsList[index].map((tag, tagIndex) => (
+                                                        {techstacksList[index].map((tag, tagIndex) => (
                                                             <Tag1 key={tagIndex}>{tag}</Tag1>
                                                         ))}
                                                     </TagsContainer>
@@ -173,11 +138,8 @@ export const Banner_Exp = () => {
                                             )
                                     })}
 
-                                </div>}
-                        </TrackVisibility>
-                    {/* <Col xs={12} md={6} xl={5}>
-                        <img src={img} />
-                    </Col> */}
+                                </div>
+    
                 </Row>
             </Container>
             </StyledSection>
