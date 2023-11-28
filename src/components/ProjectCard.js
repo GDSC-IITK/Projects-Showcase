@@ -15,11 +15,11 @@ export const ProjectCard = ({ index, title, description, imgUrl}) => {
   }
   return (
     <Col size={12} sm={6} md={4}>
-      <div className="proj-imgbx">
+      <div className="proj-imgbx" >
         <img src={img}
         style={{opacity:0.25}}
         alt="logo"/>
-        <div className="proj-txtx">
+        <div className="proj-txtx" style={{padding:'10px'}}>
           <h4 style={{marginBottom:'50px'}}>{title}</h4>
           <span>{description}</span><br></br>
           <div className="link">
