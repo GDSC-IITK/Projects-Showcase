@@ -72,14 +72,14 @@ export const Banner_Exp = () => {
     `;
 
     const Tag1 = styled.div`
-        background-color: #D3D3D3;
+        background-color: #FFFFFF;
         border-style: solid;
         border-color: #000000;
         border-width: 1px;
         color: #333;
         padding: 7px 40px;
-        border-radius: 5px;
-        margin-right: 30px;
+        border-radius: 200px;
+        margin-right: 40px;
         margin-top: 10px;
         margin-bottom: 10px;
         font-size: 25px;
@@ -124,15 +124,15 @@ export const Banner_Exp = () => {
                                                     <div class="detail-heading"> Application Deadline </div>
                                                     <div class="detail-text" > {project.deadline}
                                                     </div>
-                                                    {!deadlineStatusList[index]&&<a href={project.apply_link} id="applicationLink" class="detail-text" style={{color:'blue'}}>Apply Now</a>}
+                                                    {!deadlineStatusList[index]&&<a href={project.apply_link} target="_blank" id="applicationLink" class="detail-text" style={{color:'blue'}}>Apply Now</a>}
                                                     {deadlineStatusList[index]&&<div class="detail-text">Application Deadline is over</div>}
 
                                                     <div class="detail-heading"> Participants </div>
                                                     <div class="detail-text" > {project.number}
                                                     </div>
                                                     {
-                                                        projects.link&&
-                                                        <a href="#" class="detail-heading">Project Link</a>
+                                                        project.link&&
+                                                        <a href={project.link} target="_blank" class="detail-heading" style={{color:'blue'}}>Project Link</a>
                                                     }
                                                 </div>
                                             )
