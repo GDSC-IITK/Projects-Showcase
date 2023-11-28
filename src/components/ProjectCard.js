@@ -20,7 +20,7 @@ export const ProjectCard = ({ index, title, description, imgUrl}) => {
         style={{opacity:0.25}}
         alt="logo"/>
         <div className="proj-txtx">
-          <h4>{title}</h4>
+          <h4 style={{marginBottom:'50px'}}>{title}</h4>
           <span>{description}</span><br></br>
           <div className="link">
             <button onClick={()=>{saveData();}}>

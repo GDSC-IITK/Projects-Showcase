@@ -8,8 +8,8 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <Container>
-        <Row className="align-items-center">
-          <Col size={12} sm={6}>
+        <Row className="align-items-center" >
+          <Col size={12} sm={6} style={{marginTop:'15px'}}>
             <img src={logo} alt="Logo" className="Logo" />
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
