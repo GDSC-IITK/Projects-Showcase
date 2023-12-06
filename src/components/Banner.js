@@ -47,32 +47,52 @@ export const Banner = () => {
     }
   }
 
+  const targetDate = new Date('2023-12-08T20:00:00').getTime();
+
+  const calculateTimeRemaining = () => {
+    const currentDate = new Date().getTime();
+    return targetDate - currentDate;
+  };
+
+  const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining);
+
+  useEffect(() => {
+    const countdownInterval = setInterval(() => {
+      const remaining = calculateTimeRemaining();
+      setTimeRemaining(remaining > 0 ? remaining : 0);
+    }, 1000);
+
+    return () => clearInterval(countdownInterval);
+  }, []);
+
+  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+  const isTimerReached = timeRemaining <= 0;
+
   return (
     <section className="banner" id="home">
       <Container>
 
         <Row style={{justifyContent:'space-between'}}>
-          <div >
-                <h1>{`Projects`} </h1>
-                  <p style={{textAlign:'justify',textJustify:'inter-word'}}>Google Developer Student Clubs (GDSC) projects encompass a diverse range of innovative initiatives driven by the collaborative efforts of student developers. These projects reflect the GDSC mission to foster technological skills and problem-solving abilities among students while creating a positive impact on their communities and the world. GDSC projects often span various domains, including mobile app development, web applications, machine learning, and more.</p>
-                  <div id="infoStrip" className="infoStrip">Winter Projects are here. Applications begin 8th December!!</div>
-
+        <div>
+          <h1>{`Projects`} </h1>
+          <p style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
+            Google Developer Student Clubs (GDSC) projects encompass a diverse range of innovative initiatives driven by the collaborative efforts of student developers. These projects reflect the GDSC mission to foster technological skills and problem-solving abilities among students while creating a positive impact on their communities and the world. GDSC projects often span various domains, including mobile app development, web applications, machine learning, and more.
+          </p>
+          <div id="infoStrip" className="infoStrip">
+            {isTimerReached ? (
+              <div >
+                Winter Projects are here. <a style={{color:'green'}} href="https://docs.google.com/forms/d/e/1FAIpQLSfUKFZU5VNrP2SBrVy2BuWS-xP-1ieSPxX5Rze6JJD4wy3lpA/viewform" target="blank">Apply here!</a>
               </div>
-
-          {/* <Col xs={12} md={6} xl={5}>
-          <img src={banner} alt="Description of the image" className="img-fluid" style={{ width: '40%', height: 'auto', justifyItems:'center',alignItems:'center' }} />
-        </Col> */}
-          {/* <Col xs={12} md={6} xl={5}>
-            <div class="loader">
-              <div class="dot dot1"></div>
-              <div class="dot dot2"></div>
-              <div class="dot dot3"></div>
-              <div class="dot dot4"></div>
-              <div class="dot dot5"></div>
-              <div class="dot dot6"></div>
-              <div class="dot dot7"></div>
-            </div>
-          </Col> */}
+            ) : (
+              <div >
+                Winter Projects are coming. <a style={{color:'white'}}>Applications begin in: {days}d {hours}h {minutes}m {seconds}s</a>
+              </div>
+            )}
+          </div>
+        </div>
         </Row>
       </Container>
     </section>

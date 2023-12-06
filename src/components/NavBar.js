@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
-import logo from '../assets/img/logo.svg';
+import logo from '../assets/img/logo.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon4 from '../assets/img/nav-icon4.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
@@ -24,16 +24,11 @@ export const NavBar = () => {
   return (
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand href="/">
-            <div className="nav-google">
-            <img src={logo} alt="Logo" className="Logo" />
-            <Col>
-            <h2 className="nav-google-name web">Google Developer Student Club</h2>
-
-            </Col>
+        <Navbar.Brand href="https://gdsc.community.dev/indian-institute-of-technology-iit-kanpur/" target="blank">
+          <div>
+              <img src={logo} alt="Logo" className="FullLogo" />
           </div>
-          </Navbar.Brand>
-  
+      </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>

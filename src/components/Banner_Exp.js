@@ -124,7 +124,7 @@ export const Banner_Exp = () => {
                                                     <div class="detail-heading"> Application Deadline </div>
                                                     <div class="detail-text" > {project.deadline}
                                                     </div>
-                                                    {!deadlineStatusList[index]&&<a href={project.apply_link} target="_blank" id="applicationLink" class="detail-text" style={{color:'blue'}}>Apply Now</a>}
+                                                    {project.show_link==1&&!deadlineStatusList[index]&&<a href={project.apply_link} target="_blank" id="applicationLink" class="detail-text" style={{color:'blue'}}>Apply Now</a>}
                                                     {deadlineStatusList[index]&&<div class="detail-text">Application Deadline is over</div>}
 
                                                     <div class="detail-heading"> Participants </div>

@@ -74,6 +74,12 @@ input:focus, textarea:focus, select:focus {
   height: 50px;
 }
 
+.FullLogo {
+    max-width: 100%;
+    height: auto; /* Ensures the aspect ratio is maintained */
+    scale: 3;
+}
+
 
 .nav-google{
   display:flex;
@@ -288,7 +294,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .banner {
   margin-top: 0;
-  padding: 125px 0 150px 0;
+  padding: 125px 0 50px 0;
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
