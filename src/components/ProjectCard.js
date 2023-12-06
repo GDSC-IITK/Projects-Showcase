@@ -8,7 +8,7 @@ import projImg2 from "../assets/img/2.jpg";
 import projImg3 from "../assets/img/3.jpg";
 import { useState, useEffect } from "react";
 
-export const ProjectCard = ({ index, title, description, imgUrl}) => {
+export const ProjectCard = ({ index, title, description,isWinter, imgUrl}) => {
   let saveData = () =>{
     localStorage.setItem('indexy', JSON.stringify({index}));
     localStorage.setItem('namey', JSON.stringify({title}));
@@ -16,6 +16,11 @@ export const ProjectCard = ({ index, title, description, imgUrl}) => {
   return (
     <Col size={12} sm={6} md={4}>
       <div className="proj-imgbx" >
+      {isWinter==1 && (
+          <div className="slanted-strip" style={{ position: 'relative' }}>
+            <span style={{color:'red'}}>Winter Project</span>
+          </div>
+        )}
         <img src={img}
         style={{opacity:0.25}}
         alt="logo"/>
