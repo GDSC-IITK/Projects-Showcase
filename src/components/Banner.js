@@ -47,7 +47,7 @@ export const Banner = () => {
     }
   }
 
-  const targetDate = new Date('2023-12-08T20:00:00').getTime();
+  const targetDate = new Date('2024-01-31T20:00:00').getTime();
 
   const calculateTimeRemaining = () => {
     const currentDate = new Date().getTime();
@@ -84,11 +84,13 @@ export const Banner = () => {
           <div id="infoStrip" className="infoStrip">
             {isTimerReached ? (
               <div >
-                Winter Projects are here. <a style={{color:'green'}} href="https://docs.google.com/forms/d/e/1FAIpQLSfUKFZU5VNrP2SBrVy2BuWS-xP-1ieSPxX5Rze6JJD4wy3lpA/viewform" target="blank">Apply here!</a>
+                Apply for projects now!! No projects to apply? Start learning from our archive.
+                {/* Winter Projects are coming. <a style={{color:'white'}}>Applications begin in: {days}d {hours}h {minutes}m {seconds}s</a> */}
               </div>
             ) : (
               <div >
-                Winter Projects are coming. <a style={{color:'white'}}>Applications begin in: {days}d {hours}h {minutes}m {seconds}s</a>
+                Get a chance to win $3000 by solving a real world problem through tech under the Solutions Challenge. <a style={{color:'green'}} href="https://docs.google.com/forms/d/e/1FAIpQLSftGdrvD-r-X2QcyeYt82EP_7xPxZ_TwmMWItyrGc-7l_7PtQ/viewform" target="blank">Apply here!</a>
+                {/* Winter Projects are coming. <a style={{color:'white'}}>Applications begin in: {days}d {hours}h {minutes}m {seconds}s</a> */}
               </div>
             )}
           </div>
